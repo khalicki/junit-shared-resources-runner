@@ -3,11 +3,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.eanlr.testing</groupId>
-    <artifactId>shared-resources-runner</artifactId>
+    <artifactId>junit-shared-resources-runner</artifactId>
     <version>0.1</version>
     <packaging>jar</packaging>
 
-    <name>shared-resources-runner</name>
+    <name>junit-shared-resources-runner</name>
     <url>http://maven.apache.org</url>
 
     <properties>
