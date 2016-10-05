@@ -4,7 +4,7 @@
 
     <groupId>org.eanlr.testing</groupId>
     <artifactId>shared-resources-runner</artifactId>
-    <version>0.1-SNAPSHOT</version>
+    <version>0.1</version>
     <packaging>jar</packaging>
 
     <name>shared-resources-runner</name>
@@ -42,6 +42,13 @@
                 <version>2.17</version>
             </plugin>
         </plugins>
+        <extensions>
+            <extension>
+                <groupId>org.apache.maven.wagon</groupId>
+                <artifactId>wagon-ssh-external</artifactId>
+                <version>2.10</version>
+            </extension>
+        </extensions>
     </build>
     <reporting>
         <plugins>
@@ -75,6 +82,9 @@
                         <artifactId>cobertura-maven-plugin</artifactId>
                         <version>2.7</version>
                         <configuration>
+                            <check>
+
+                            </check>
                             <formats>
                                 <format>xml</format>
                             </formats>
@@ -92,4 +102,10 @@
             </build>
         </profile>
     </profiles>
+    <distributionManagement>
+        <repository>
+            <id>eanlr-release</id>
+            <url>scpexe://vps/var/www/html/mvn/repo/release</url>
+        </repository>
+    </distributionManagement>
 </project>
